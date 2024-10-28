@@ -16,7 +16,7 @@ use App\Http\Controllers\NewsFilterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('news.index');
 });
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
